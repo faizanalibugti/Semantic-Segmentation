@@ -1,0 +1,5 @@
+python segment_video.py --video videos/massachusetts.mp4 --output output/massachusetts_output.avi
+
+python segment_image.py --image images/example_01.png
+
+python segment_screen.py
