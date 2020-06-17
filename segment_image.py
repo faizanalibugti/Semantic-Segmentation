@@ -51,6 +51,9 @@ for (i, (className, color)) in enumerate(zip(CLASSES, COLORS)):
 print("[INFO] loading model...")
 net = cv2.dnn.readNet('./enet-cityscapes/enet-model.net')
 
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
 # load the input image, resize it, and construct a blob from it,
 # but keeping mind mind that the original input image dimensions
 # ENet was trained on was 1024x512
