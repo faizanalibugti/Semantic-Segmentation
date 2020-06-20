@@ -42,8 +42,8 @@ COLORS = np.array(COLORS, dtype="uint8")
 print("[INFO] loading model...")
 net = cv2.dnn.readNet('./enet-cityscapes/enet-model.net')
 
-net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+#net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+#net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
 # initialize the video stream and pointer to output video file
 vs = cv2.VideoCapture(args["video"])
